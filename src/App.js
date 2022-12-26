@@ -8,9 +8,11 @@ import { useState, useEffect } from "react";
 
 import DataTable from "react-data-table-component";
 
+let urlService ="http://localhost:3001";
 
 
 function App() {
+  
   const columns = [
     {
       name: "Name",
@@ -64,7 +66,7 @@ function App() {
 
   const fetchData = async (keyword,page, per_page) => {
     fetch(
-      `http://localhost:3001/api/getDataAndPaging?keyword=${keyword}&page=${page}&per_page=${per_page}`
+      urlService+`/api/getDataAndPaging?keyword=${keyword}&page=${page}&per_page=${per_page}`
     )
       .then((res) => res.json())
       .then(
@@ -90,7 +92,7 @@ function App() {
 
   const confirmDeleteUser = async (dataFilter) => {
     fetch(
-      `http://localhost:3001/api/user/${dataFilter.userId}`
+      urlService+`/api/user/${dataFilter.userId}`
       , { method: 'DELETE' }
     )
       .then((res) => res.json())
@@ -204,7 +206,7 @@ function App() {
             body: JSON.stringify(json)
         };
         fetch(
-          `http://localhost:3001/api/user/${dataFilter.userId}`
+          urlService+`/api/user/${dataFilter.userId}`
           , requestOptions
         )
           .then((res) => res.json())
