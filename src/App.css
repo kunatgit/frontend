@@ -1,0 +1,46 @@
+.app-header{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  border-bottom: 1px double gray;
+}
+.app-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.app-body > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  padding: 10px;
+}
+
+.functionBox{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.functionBox > div{
+  display: flex;
+}
+
+.updateBox{
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content:  space-between;
+}
+.updateBox > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: self-start;
+  padding: 5px 0px;
+}
